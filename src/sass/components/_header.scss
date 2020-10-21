@@ -1,0 +1,11 @@
+@import "../utils/variables";
+
+header {
+    padding: 0.5rem 1rem;
+    .logo {
+        width: 80px;
+    }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+        background-color: $menu !important;
+    }
+}

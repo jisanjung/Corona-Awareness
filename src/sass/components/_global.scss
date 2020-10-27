@@ -110,3 +110,38 @@ img {
 }
 
 /* only global to application */
+body {
+    font-family: $text;
+}
+.title {
+    font-family: $title;
+    line-height: 50px;
+}
+.text {
+    font-family: $text;
+    line-height: 30px;
+    margin: 0.5rem 0;
+}
+.round {
+    border-radius: 35px;
+}
+.bold {
+    font-weight: bold;
+}
+.btn {
+    padding: 1rem 3rem;
+    font-family: $text;
+    letter-spacing: 0.5px;
+}
+.primary-btn {
+    color: $white;
+    background: $orange;
+}
+.light-btn {
+    color: $black;
+    background: $white;
+    border: 2px solid $orange;
+}
+.container {
+    @include container(small);
+}

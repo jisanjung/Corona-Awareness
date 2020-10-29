@@ -2,11 +2,11 @@ import React from 'react'
 
 const Button = (props) => {
 
-    const { type, content } = props;
+    const { type, dest, content } = props;
 
     return (
         <div className="btn-wrap">
-            <a href="/" className={`btn round bold ${type === "primary" ? "primary-btn" : "light-btn"}`}>{content}</a>
+            <a href={dest} className={`btn round bold ${type === "primary" ? "primary-btn" : "light-btn"}`}>{content}</a>
         </div>
     )
 }

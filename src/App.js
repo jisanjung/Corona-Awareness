@@ -17,8 +17,8 @@ export class App extends Component {
             <Title color="#294e7d" size="1.125rem" content="Stay Home, Stay Safe"/>
             <Title color="#706ad4" size="2.25rem" content="Protect Yourself From Coronavirus (COVID-19)"/>
             <Text color="#8a8eaa" content="Learn how to help flatten the curve of a deadly virus."/>
-            <Button type="primary" content="Prevention"/>
-            <Button type="light" content="Tracker"/>
+            <Button type="primary" dest="#Prevention" content="Prevention"/>
+            <Button type="light" dest="/" content="Tracker"/>
           </div>
         </div>
         <div className="about">
@@ -27,9 +27,7 @@ export class App extends Component {
               <img src={about} alt="About"/>
             </div>
             <div className="info">
-              <div id="tag">
-                <Tag content="About COVID-19"/>
-              </div>
+              <Tag content="About COVID-19"/>
             </div>
           </div>
         </div>

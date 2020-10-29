@@ -4,6 +4,8 @@ import Title from './components/Title';
 import Text from "./components/Text";
 import "./sass/main.scss";
 import Button from './components/Button';
+import about from "./images/about.png";
+import Tag from './components/Tag';
 
 export class App extends Component {
   render() {
@@ -17,6 +19,18 @@ export class App extends Component {
             <Text color="#8a8eaa" content="Learn how to help flatten the curve of a deadly virus."/>
             <Button type="primary" content="Prevention"/>
             <Button type="light" content="Tracker"/>
+          </div>
+        </div>
+        <div className="about">
+          <div className="container flex">
+            <div className="img-wrap">
+              <img src={about} alt="About"/>
+            </div>
+            <div className="info">
+              <div id="tag">
+                <Tag content="About COVID-19"/>
+              </div>
+            </div>
           </div>
         </div>
       </div>

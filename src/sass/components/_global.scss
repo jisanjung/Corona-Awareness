@@ -129,8 +129,7 @@ body {
     font-weight: bold;
 }
 .btn-wrap {
-    display: inline-block;
-    margin: 0.75rem 0;
+    margin: 1.25rem 0;
 }
 .btn {
     text-align: center;
@@ -147,9 +146,19 @@ body {
     background: $orange;
 }
 .light-btn {
-    color: $black;
+    color: $dark-blue;
     background: $white;
     border: 2px solid $orange;
+}
+.tag {
+    color: $purp;
+    background: $light-purp;
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    margin: 1rem 0;
+    span {
+        font-size: 13px;
+    }
 }
 .container {
     @include container(small);

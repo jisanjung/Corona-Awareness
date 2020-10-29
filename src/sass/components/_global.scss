@@ -130,6 +130,7 @@ body {
 }
 .btn-wrap {
     margin: 1.25rem 0;
+    width: 15rem;
 }
 .btn {
     text-align: center;
@@ -162,4 +163,7 @@ body {
 }
 .container {
     @include container(small);
+}
+.section {
+    padding: 4rem 0;
 }

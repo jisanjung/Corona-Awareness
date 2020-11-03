@@ -1,0 +1,17 @@
+@import "../utils/variables";
+
+.symptoms {
+    background: $bg;
+    .info {
+        ul {
+            padding: 1rem 0;
+            li {
+                svg {
+                    color: #40cd79;
+                    margin-right: 0.5rem;
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}

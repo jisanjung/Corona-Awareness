@@ -1,0 +1,20 @@
+@import "../utils/mixins";
+
+.prevention {
+    .tag {
+        @include center(x, relative);
+    }
+    h1, p {
+        text-align: center;
+    }
+    .flex {
+        flex-direction: column;
+        .sub-info {
+            padding: 2rem;
+            img {
+                width: 100px;
+                @include center(x, relative);
+            }
+        }
+    }
+}

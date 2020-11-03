@@ -8,6 +8,10 @@ import about from "./images/about.png";
 import Tag from './components/Tag';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import mask from "./images/mask.png";
+import wash from "./images/wash.png";
+import cough from "./images/cough.png";
+import clean from "./images/clean.png";
 
 export class App extends Component {
   render() {
@@ -62,6 +66,35 @@ export class App extends Component {
             </div>
             <div>
 
+            </div>
+          </div>
+        </div>
+        <div className="prevention section">
+          <div className="container">
+            <Tag content="Prevention"/>
+            <Title color={dark} size="2rem" content="How to Stay Safe"/>
+            <Text color={dark} content="Even if you feel that you are healthy, it is good to keep these precautions in mind for those around you."/>
+            <div className="flex">
+              <div className="sub-info">
+                <img src={mask} alt="Wear a mask"/>
+                <Title color={dark} size="1.25rem" content="Wear a mask"/>
+                <Text color={gray} content="This has proven to be very effective. Make you are wearing a mask in public areas for the interest of others."/>
+              </div>
+              <div className="sub-info">
+                <img src={wash} alt="Wash you hands"/>
+                <Title color={dark} size="1.25rem" content="Wash you hands"/>
+                <Text color={gray} content="When washing, be sure to clean every part of your hand, even wrists. Hand washing should take at least 20 seconds."/>
+              </div>
+              <div className="sub-info">
+                <img src={cough} alt="Cough in your arm"/>
+                <Title color={dark} size="1.25rem" content="Cough in your arm"/>
+                <Text color={gray} content="It is said that coughs and sneeze droplets travel a couple of feet. Be sure to cover it up with your arm, for most effectiveness."/>
+              </div>
+              <div className="sub-info">
+                <img src={clean} alt="Clean and disinfect"/>
+                <Title color={dark} size="1.25rem" content="Clean and disinfect"/>
+                <Text color={gray} content="After staying in a public area, be sure to clean and disinfect any parts you may have touched, for the benefit of the next person."/>
+              </div>
             </div>
           </div>
         </div>

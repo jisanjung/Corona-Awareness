@@ -12,6 +12,7 @@ import mask from "./images/mask.png";
 import wash from "./images/wash.png";
 import cough from "./images/cough.png";
 import clean from "./images/clean.png";
+import Footer from './components/Footer';
 
 export class App extends Component {
   render() {
@@ -69,7 +70,7 @@ export class App extends Component {
             </div>
           </div>
         </div>
-        <div className="prevention section">
+        <div className="prevention section" id="Prevention">
           <div className="container">
             <Tag content="Prevention"/>
             <Title color={dark} size="2rem" content="How to Stay Safe"/>
@@ -97,6 +98,9 @@ export class App extends Component {
               </div>
             </div>
           </div>
+        </div>
+        <div className="footer">
+          <Footer/>
         </div>
       </div>
     )

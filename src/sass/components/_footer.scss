@@ -3,3 +3,11 @@
 .footer-banner {
     background: $orange;
 }
+.footer-main {
+    .flex {
+        flex-direction: column;
+        .logo {
+            width: 8rem;
+        }
+    }
+}

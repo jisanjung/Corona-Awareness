@@ -31,6 +31,12 @@ const Footer = () => {
                         <a href="#Symptoms"><Text color={gray} content="Symptoms"/></a>
                         <a href="#Prevention"><Text color={gray} content="Prevention"/></a>
                     </div>
+                    <div className="pages">
+                        <Title color={dark} size="1.5rem" content="Pages"/>
+                        <a href="/"><Text color={gray} content="Home"/></a>
+                        <a href="/"><Text color={gray} content="Latest News"/></a>
+                        <a href="/"><Text color={gray} content="Tracker"/></a>
+                    </div>
                 </div>
             </div>
         </footer>

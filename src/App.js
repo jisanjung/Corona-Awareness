@@ -24,7 +24,7 @@ export class App extends Component {
 
     return (
       <div className="App">
-          <Header/>
+        <Header/>
         <div className="home section">
           <div className="container"> 
             <Title color={darkBlue} size="1.125rem" content="Stay Home, Stay Safe"/>
@@ -34,7 +34,7 @@ export class App extends Component {
             <Button type="light" dest="/" content="Tracker"/>
           </div>
         </div>
-        <div className="about section">
+        <div className="about section" id="About">
           <div className="container flex">
             <div className="img-wrap">
               <img src={about} alt="About"/>
@@ -49,7 +49,7 @@ export class App extends Component {
             </div>
           </div>
         </div>
-        <div className="symptoms section">
+        <div className="symptoms section" id="Symptoms">
           <div className="container flex">
             <div className="info">
               <Tag content="COVID-19 Symptoms"/>

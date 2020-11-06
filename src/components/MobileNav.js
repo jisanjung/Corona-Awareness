@@ -6,9 +6,10 @@ const MobileNav = (props) => {
         <nav style={{display: (props.menuState) ? "block" : "none"}}>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Symptoms</a></li>
-                <li><a href="/">Precautions</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Symptoms">Symptoms</a></li>
+                <li><a href="#Prevention">Prevention</a></li>
+                <li><a href="/">Latest News</a></li>
                 <li><a href="/">Tracker</a></li>
             </ul>
         </nav>

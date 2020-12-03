@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import Header from './Header';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 let url = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${API_KEY}`;
@@ -33,6 +34,7 @@ export class News extends Component {
     render() {
         return (
             <div className="news">
+                <Header/>
                 <h1>Latest News</h1>
                 <ul className="articles">
                     {this.state.news.map((article, i) => {

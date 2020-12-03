@@ -36,6 +36,9 @@
                 padding-top: 1.5rem;
                 color: $menu;
                 position: relative;
+                span {
+                    margin-right: 0.5rem;
+                }
                 &::before {
                     position: absolute;
                     content: "";

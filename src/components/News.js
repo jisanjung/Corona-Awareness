@@ -3,7 +3,8 @@ import axios from "axios";
 import Header from './Header';
 import Title from './Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import moment from "moment";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 let url = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${API_KEY}`;
@@ -34,9 +35,14 @@ export class News extends Component {
             });
     }
 
-    render() {
+    formatDate(date) {
+        return moment(date).format("LL").toString();
+    }
 
+    render() {
+        // variables
         const rightArrow = <FontAwesomeIcon icon={faArrowRight}/>
+        const calendar = <FontAwesomeIcon icon={faCalendarAlt}/>
 
         return (
             <div className="news">
@@ -53,7 +59,7 @@ export class News extends Component {
                                     <div className="info">
                                         <h3>{article.title}</h3>
                                         <a className="text-dark flex align-center" href={article.url}>Read More<span>{rightArrow}</span></a>
-                                        <span className="date-posted block">{article.publishedAt}</span>
+                                        <span className="date-posted block"><span>{calendar}</span>{this.formatDate(article.publishedAt)}</span>
                                     </div>
                                 </li>
                             )

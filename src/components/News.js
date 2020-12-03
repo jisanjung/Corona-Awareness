@@ -55,7 +55,7 @@ export class News extends Component {
                 <Header/>
                 <div className="container">
                     <Title size="1.5rem" content="Latest News"/>
-                    <ul className="articles">
+                    <ul className="articles flex">
                         {currentPosts.map((article, i) => {
                             return (
                                 <Article key={i} content={article}/>

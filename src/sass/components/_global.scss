@@ -116,11 +116,17 @@ body {
 .title {
     font-family: $title;
     line-height: 50px;
+    color: $dark;
 }
 .text {
     font-family: $text;
     line-height: 30px;
     margin: 0.5rem 0;
+    color: $text-light;
+}
+.text-dark {
+    @extend .text;
+    color: $text-dark;
 }
 .round {
     border-radius: 35px;

@@ -11,7 +11,7 @@ const Header = () => {
     }
 
     return (
-        <header>
+        <header id="Header">
             <div className="flex flex-between align-center">
                 <a href="/" className="logo">
                     <img src={logo} alt="logo"/>

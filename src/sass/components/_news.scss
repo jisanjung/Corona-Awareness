@@ -8,6 +8,13 @@
     .article {
         background: $white;
         margin-bottom: 2rem;
+        .img-wrap {
+            height: 230px;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
         .info {
             padding: 1.5rem;
             h3 {

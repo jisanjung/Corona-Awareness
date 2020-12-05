@@ -63,7 +63,7 @@ export class News extends Component {
                         })}
                     </ul>
                 </div>
-                <Pagination postsPerPage={this.state.postsPerPage} totalPosts={this.state.news.length} paginate={this.paginate.bind(this)}/>
+                <Pagination postsPerPage={this.state.postsPerPage} totalPosts={this.state.news.length} current={this.state.currentPage} paginate={this.paginate.bind(this)}/>
             </div>
         )
     }

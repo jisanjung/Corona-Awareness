@@ -4,6 +4,7 @@ import Header from './Header';
 import Title from './Title';
 import Article from './Article';
 import Pagination from './Pagination';
+import Footer from "./Footer";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 let url = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${API_KEY}`;
@@ -54,7 +55,10 @@ export class News extends Component {
             <div className="news">
                 <Header/>
                 <div className="container">
-                    <Title size="1.5rem" content="Latest News"/>
+                    <div className="flex flex-response flex-between ">
+                        <Title size="1.5rem" content="Latest News"/>
+                        <Pagination postsPerPage={this.state.postsPerPage} totalPosts={this.state.news.length} current={this.state.currentPage} paginate={this.paginate.bind(this)}/>
+                    </div>
                     <ul className="articles flex">
                         {currentPosts.map((article, i) => {
                             return (
@@ -63,7 +67,12 @@ export class News extends Component {
                         })}
                     </ul>
                 </div>
-                <Pagination postsPerPage={this.state.postsPerPage} totalPosts={this.state.news.length} current={this.state.currentPage} paginate={this.paginate.bind(this)}/>
+                <div className="bottom">
+                    <Pagination postsPerPage={this.state.postsPerPage} totalPosts={this.state.news.length} current={this.state.currentPage} paginate={this.paginate.bind(this)}/>
+                </div>
+                <div className="footer">
+                    <Footer/>
+                </div>
             </div>
         )
     }

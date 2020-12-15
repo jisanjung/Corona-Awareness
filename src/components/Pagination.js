@@ -11,13 +11,15 @@ const Pagination = (props) => {
     }
 
     return (
-        <div className="pagination flex flex-center">
+        <div className="pagination">
             <ul className="flex">
                 {pageNumbers.map(num => {
                     return (
                     <li key={num} className={`flex flex-center align-center ${num === current ? "active" : ""}`}>
-                        <a href="#Header" onClick={() => paginate(num)}>
-                            {num}
+                        <a href="#Header" onClick={() => paginate(num)} className="relative">
+                            <span className="center">
+                                {num}
+                            </span>
                         </a>
                     </li>
                     )

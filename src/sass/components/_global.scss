@@ -39,6 +39,9 @@ a {
 .flex-center {
     justify-content: center;
 }
+.flex-left {
+    justify-content: left;
+}
 .flex-around {
     justify-content: space-around;
 }
@@ -47,6 +50,12 @@ a {
 }
 .flex-wrap {
     flex-wrap: wrap;
+}
+.flex-response {
+    flex-direction: column;
+    @include media-query-grow(768px) {
+        flex-direction: row;
+    }
 }
 .align-center {
     align-items: center;

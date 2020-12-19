@@ -5,6 +5,7 @@ import Title from './Title';
 import Article from './Article';
 import Pagination from './Pagination';
 import Footer from "./Footer";
+import Input from './Input';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 let url = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${API_KEY}`;
@@ -16,9 +17,11 @@ export class News extends Component {
         this.state = {
             error: false,
             news: [],
+            filteredNews: [],
             message: "", // if an error occurs update this message
             currentPage: 1,
-            postsPerPage: 10
+            postsPerPage: 10,
+            input_val: ""
         }
     }
 
@@ -42,7 +45,14 @@ export class News extends Component {
         this.setState({
             currentPage: num
         });
-    } 
+    }
+    
+    // filter articles 
+    handleSearch(e) {
+        this.setState({
+            input_val: e.target.value
+        });
+    }
 
     render() {
 
@@ -59,8 +69,17 @@ export class News extends Component {
                         <Title size="1.5rem" content="Latest News"/>
                         <Pagination postsPerPage={this.state.postsPerPage} totalPosts={this.state.news.length} current={this.state.currentPage} paginate={this.paginate.bind(this)}/>
                     </div>
+                    <form>
+                        <Input search={this.handleSearch.bind(this)}/>
+                    </form>
                     <ul className="articles flex">
-                        {currentPosts.map((article, i) => {
+                        {currentPosts.filter(val => {
+                            if (this.state.input_val === "") {
+                                return val
+                            } else if (val.title.toLowerCase().includes(this.state.input_val.toLowerCase())) {
+                                return val
+                            }
+                        }).map((article, i) => {
                             return (
                                 <Article key={i} content={article}/>
                             )

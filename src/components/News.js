@@ -17,7 +17,6 @@ export class News extends Component {
         this.state = {
             error: false,
             news: [],
-            filteredNews: [],
             message: "", // if an error occurs update this message
             currentPage: 1,
             postsPerPage: 10,

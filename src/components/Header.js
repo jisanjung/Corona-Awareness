@@ -12,17 +12,19 @@ const Header = () => {
 
     return (
         <header id="Header">
-            <div className="flex flex-between align-center">
-                <a href="/" className="logo">
-                    <img src={logo} alt="logo"/>
-                </a>
-                <button className={`hamburger hamburger--squeeze ${(menu) ? 'is-active' : ''}`} type="button" onClick={toggleMenu}>
-                    <span className="hamburger-box">
-                        <span className="hamburger-inner"></span>
-                    </span>
-                </button>
+            <div className="container">
+                <div className="flex flex-between align-center">
+                    <a href="/" className="logo">
+                        <img src={logo} alt="logo"/>
+                    </a>
+                    <button className={`hamburger hamburger--squeeze ${(menu) ? 'is-active' : ''}`} type="button" onClick={toggleMenu}>
+                        <span className="hamburger-box">
+                            <span className="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+                <MobileNav menuState={menu}/>
             </div>
-            <MobileNav menuState={menu}/>
         </header>
     )
 }

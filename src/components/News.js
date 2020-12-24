@@ -6,6 +6,7 @@ import Article from './Article';
 import Pagination from './Pagination';
 import Footer from "./Footer";
 import Input from './Input';
+import Loading from './Loading';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 let url = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${API_KEY}`;
@@ -20,13 +21,15 @@ export class News extends Component {
             message: "", // if an error occurs update this message
             currentPage: 1,
             postsPerPage: 10,
-            input_val: ""
+            input_val: "",
+            loading: true
         }
     }
 
     componentDidMount() {
         axios.get(url)
             .then(res => {
+                this.setState({loading: false})
                 this.setState({
                     news: [...res.data.articles]
                 }, () => console.log(this.state.news));
@@ -53,8 +56,13 @@ export class News extends Component {
         });
     }
 
-    render() {
+    loading() {
+        if (this.state.loading) {
+            console.log("loading");
+        } 
+    }
 
+    render() {
         // get current posts
         const indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
         const indexOfFirstPost = indexOfLastPost - this.state.postsPerPage;
@@ -72,6 +80,7 @@ export class News extends Component {
                         <Input search={this.handleSearch.bind(this)}/>
                     </form>
                     <ul className="articles flex">
+                        {this.state.loading ? <Loading/> : <span></span>} 
                         {currentPosts.filter(val => {
                             if (this.state.input_val === "") {
                                 return val

@@ -117,6 +117,14 @@ img {
 .text-right {
     text-align: right;
 }
+.danger {
+    border: 1px solid $danger-text;
+    background: $danger-bg;
+    color: $danger-text;
+    padding: 1rem;
+    text-align: center;
+    display: block;
+}
 
 /* only global to application */
 body {

@@ -79,8 +79,9 @@ export class News extends Component {
                     <form>
                         <Input search={this.handleSearch.bind(this)}/>
                     </form>
+                    {this.state.message ? <span className="danger">{this.state.message}</span> : 
                     <ul className="articles flex">
-                        {this.state.loading ? <Loading/> : <span></span>} 
+                    {this.state.loading ? <Loading/> : <span></span>} 
                         {currentPosts.filter(val => {
                             if (this.state.input_val === "") {
                                 return val
@@ -92,7 +93,7 @@ export class News extends Component {
                                 <Article key={i} content={article}/>
                             )
                         })}
-                    </ul>
+                    </ul>}
                 </div>
                 <div className="bottom">
                     <Pagination postsPerPage={this.state.postsPerPage} totalPosts={this.state.news.length} current={this.state.currentPage} paginate={this.paginate.bind(this)}/>

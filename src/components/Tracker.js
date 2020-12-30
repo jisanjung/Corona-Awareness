@@ -3,45 +3,9 @@ import Footer from './Footer.js';
 import Header from "./Header.js";
 import Title from './Title.js';
 import axios from "axios";
+import DailyNumbers from './DailyNumbers.js';
 
 export class Tracker extends Component {
-
-    constructor() {
-        super();
-        this.state = {
-            url: {
-                daily: "https://corona.lmao.ninja/v3/covid-19/all",
-                chart: "https://corona.lmao.ninja/v3/covid-19/historical/all",
-                country: "https://corona.lmao.ninja/v3/covid-19/countries"
-            },
-            updated: "",
-            cases: "",
-            deaths: "",
-            recovered: "",
-            todayCases: "",
-            pastCases: [],
-            pastRecovered: [],
-            country: []
-        }
-    }
-
-    componentDidMount() {
-
-        const { url } = this.state;
-
-        // daily numbers
-        axios.get(url.daily)
-        .then(res => {
-            this.setState({
-                updated: res.data.updated,
-                cases: res.data.cases,
-                deaths: res.data.deaths,
-                recovered: res.data.recovered,
-                todayCases: res.data.todayCases
-            });
-        })
-    }
-
     render() {
 
         const dark = "#35404e";
@@ -59,7 +23,7 @@ export class Tracker extends Component {
                     </div>
                 </div>
                 <div className="daily">
-
+                    <DailyNumbers/>
                 </div>
                 <div className="chart">
 

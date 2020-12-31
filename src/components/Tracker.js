@@ -22,14 +22,16 @@ export class Tracker extends Component {
                         <p className="text-center">See daily <a href="/" style={{color: orange}}>numbers</a>, data <a href="/" style={{color: orange}}>visualized</a> and country <a href="/" style={{color: orange}}>specifics</a></p>
                     </div>
                 </div>
-                <div className="daily">
-                    <DailyNumbers/>
-                </div>
-                <div className="chart">
+                <div className="container">
+                    <div className="daily">
+                        <DailyNumbers/>
+                    </div>
+                    <div className="chart">
 
-                </div>
-                <div className="country">
+                    </div>
+                    <div className="country">
 
+                    </div>
                 </div>
                 <Footer/>
             </div>

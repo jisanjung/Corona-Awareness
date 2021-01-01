@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Footer from './Footer.js';
 import Header from "./Header.js";
 import Title from './Title.js';
-import axios from "axios";
 import DailyNumbers from './DailyNumbers.js';
+import Chart from './Chart.js';
 
 export class Tracker extends Component {
     render() {
@@ -27,7 +27,7 @@ export class Tracker extends Component {
                         <DailyNumbers/>
                     </div>
                     <div className="chart">
-
+                        <Chart/>
                     </div>
                     <div className="country">
 

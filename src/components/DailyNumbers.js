@@ -8,6 +8,7 @@ const DailyNumbers = () => {
     const [cases, setCases] = useState("");
     const [deaths, setDeaths] = useState("");
     const [recovered, setRecovered] = useState("");
+    
 
     useEffect(() => {
         axios.get("https://corona.lmao.ninja/v3/covid-19/all")

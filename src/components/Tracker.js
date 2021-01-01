@@ -4,6 +4,7 @@ import Header from "./Header.js";
 import Title from './Title.js';
 import DailyNumbers from './DailyNumbers.js';
 import Chart from './Chart.js';
+import Country from './Country.js';
 
 export class Tracker extends Component {
     render() {
@@ -30,7 +31,7 @@ export class Tracker extends Component {
                         <Chart/>
                     </div>
                     <div className="country">
-
+                        <Country/>
                     </div>
                 </div>
                 <Footer/>

@@ -3,4 +3,21 @@
         padding: 3rem 0;
         background: url("../../images/showcase.png");
     }
+    .daily {
+        .daily-item {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-width: 2px;
+            border-style: solid;
+        }
+        .cases {
+            border-color: $orange;
+        }
+        .deaths {
+            border-color: $light-red;
+        }
+        .recovered {
+            border-color: $success;
+        }
+    }
 }

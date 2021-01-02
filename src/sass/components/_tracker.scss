@@ -9,6 +9,13 @@
             margin: 1rem 0;
             border-width: 2px;
             border-style: solid;
+            button {
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: $text-dark;
+                @include center(y, relative);
+            }
         }
         .cases {
             border-color: $orange;

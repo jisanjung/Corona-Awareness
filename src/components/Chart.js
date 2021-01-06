@@ -44,7 +44,7 @@ export class Chart extends Component {
 
     render() {
         return (
-            <div>
+            <div className="chart-container">
                 <Line 
                     data={this.state.data}
                     options={{

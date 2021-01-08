@@ -8,7 +8,10 @@ const Country = () => {
 
     useEffect(() => {
         axios.get("https://corona.lmao.ninja/v3/covid-19/countries")
-        .then(res => setCountries([...res.data]))
+        .then(res => {
+            const sortedCountries = res.data.sort((country, nextCountry) => nextCountry.cases - country.cases);
+            setCountries([...sortedCountries])
+        })
     }, []);
 
     return (

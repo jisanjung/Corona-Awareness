@@ -29,13 +29,13 @@ export class Chart extends Component {
                         label: "Cases",
                         data: [...cases],
                         backgroundColor: "transparent",
-                        borderColor: "rgb(130, 122, 243)"
+                        borderColor: "#d9534f"
                     },
                     {
                         label: "Recovered",
                         data: [...recovered],
                         backgroundColor: "transparent",
-                        borderColor: "rgb(108, 230, 244)"
+                        borderColor: "#5cb85c"
                     }]
                 }
             });

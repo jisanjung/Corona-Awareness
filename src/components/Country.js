@@ -13,16 +13,18 @@ const Country = () => {
 
     return (
         <div>
-            <form>
+            <form onSubmit={e => e.preventDefault()}>
                 <input type="text" placeholder="Search Country..." onChange={e => setInput(e.target.value)}/>
             </form>
-            {countries.filter(val => {
-                if (input === "") {
-                    return countries
-                } else if (val.country.toLowerCase().includes(input.toLowerCase())) {
-                    return val
-                }
-            }).map((val, i) => <li key={i}>{val.country}</li>)}
+            <div className="country-list">
+                {countries.filter(val => {
+                    if (input === "") {
+                        return countries
+                    } else if (val.country.toLowerCase().includes(input.toLowerCase())) {
+                        return val
+                    }
+                }).map((val, i) => <li key={i}>{val.country}</li>)}
+            </div>
         </div>
     )
 }

@@ -34,7 +34,12 @@
         }
     }
     .country {
-        height: 700px;
-        overflow: scroll;
+        .country-list {
+            height: 700px;
+            overflow: scroll;
+            form {
+               
+            }
+        }
     }
 }

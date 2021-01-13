@@ -34,12 +34,22 @@
         }
     }
     .country {
+        height: 700px;
+        overflow: hidden;
         .country-list {
-            height: 700px;
-            overflow: scroll;
-            form {
-               
+            .each-country {
+                padding: 0.5rem;
             }
         }
+        form {
+            margin-bottom: 1rem;
+            input {
+                border: none;
+                border-bottom: 2px solid $dark;
+                padding: 0.5rem;
+                font-family: $text;
+                font-size: 1rem;
+            }
+         }
     }
 }

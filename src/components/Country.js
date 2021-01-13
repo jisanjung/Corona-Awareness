@@ -19,15 +19,33 @@ const Country = () => {
             <form onSubmit={e => e.preventDefault()}>
                 <input type="text" placeholder="Search Country..." onChange={e => setInput(e.target.value)}/>
             </form>
-            <div className="country-list">
-                {countries.filter(val => {
-                    if (input === "") {
-                        return countries
-                    } else if (val.country.toLowerCase().includes(input.toLowerCase())) {
-                        return val
-                    }
-                }).map((val, i) => <li key={i}>{val.country}</li>)}
-            </div>
+            <table className="country-list">
+                <tbody>
+                    <tr>
+                        <th>Flag</th>
+                        <th>Country</th>
+                        <th>Cases</th>
+                        <th>Deaths</th>
+                        <th>Recovered</th>
+                    </tr>
+                    {countries.filter(val => {
+                        if (input === "") {
+                            return countries
+                        } else if (val.country.toLowerCase().includes(input.toLowerCase())) {
+                            return val
+                        }
+                    }).map((val, i) => {
+                        return (
+                        <tr key={i} className="each-country">
+                            <td><img src={val.countryInfo.flag}/></td>
+                            <td>{val.country}</td>
+                            <td>{val.cases}</td>
+                            <td>{val.deaths}</td>
+                            <td>{val.recovered}</td>
+                        </tr>)
+                    })}
+                </tbody>
+            </table>
         </div>
     )
 }
